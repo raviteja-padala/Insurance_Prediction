@@ -10,7 +10,7 @@ on:
 
 jobs:
   dependency_check:
-    runs-on: [ubuntu-latest, windows-latest]
+    runs-on: [ubuntu-latest]
 
     steps:
       - name: Checkout Repository
