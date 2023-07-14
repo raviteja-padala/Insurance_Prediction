@@ -33,19 +33,19 @@ class ModelTrainer:
             raise InsuranceException(e, sys)
 
     def train_model(self,x,y):
-        # try:
-        #     xgb_r = xg.XGBRegressor()
-        #     xgb_r.fit(x,y)
-        #     return xgb_r
-        # except Exception as e:
-        #     raise InsuranceException(e, sys)
-
         try:
-            lr = LinearRegression()
-            lr.fit(x,y)
-            return lr
+            xgb_r = xg.XGBRegressor()
+            xgb_r.fit(x,y)
+            return xgb_r
         except Exception as e:
             raise InsuranceException(e, sys)
+
+        #try:
+            #lr = LinearRegression()
+            #lr.fit(x,y)
+            #return lr
+        #except Exception as e:
+            #raise InsuranceException(e, sys)
 
 
 

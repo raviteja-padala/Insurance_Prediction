@@ -47,7 +47,7 @@ class DataValidation:
             return df
         except Exception as e:
             raise InsuranceException(e, sys)
-    #     print("dsgfg")
+    
 
     def is_required_columns_exists(self,base_df:pd.DataFrame,current_df:pd.DataFrame,report_key_name:str)->bool:
         try:
@@ -58,7 +58,7 @@ class DataValidation:
             missing_columns = []
             for base_column in base_columns:
                 if base_column not in current_columns:
-                    logging.info(f"Column: [{base} is not available.]")
+                    logging.info(f"Column: [{base_column} is not available.]")
                     missing_columns.append(base_column)
             
             if len(missing_columns)>0:
